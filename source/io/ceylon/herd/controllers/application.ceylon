@@ -5,28 +5,16 @@ shared object application {
   
   route("/")
   shared class Index() extends Handler() {
-    shared actual Response handle() {
-      return ok {
-        body = index();
-      };
-    }
+    shared actual Response handle() =>  ok { index(); };
   }  
   
   route("/guidelines")
   shared class Guidelines() extends Handler() {
-    shared actual Response handle() {
-      return ok {
-        body = guidelines();
-      };
-    }
+    shared actual Response handle() => ok { guidelines(); };
   }
   
   route("/usage")
   shared class Usage() extends Handler() {
-    shared actual Response handle() {
-      return ok {
-        body = usage();
-      };
-    }
+    shared actual Response handle() => ok { usage(); };
   }
 }
